@@ -40,5 +40,5 @@ public class App extends Applet {
 
     public static void main(String[] args) {
         AppletRunner.run("sample.App", "This is a sample quick start project");
-    }   
+    }
 }
