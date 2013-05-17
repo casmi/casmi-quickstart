@@ -3,11 +3,11 @@
 
     <groupId>your-group</groupId>
     <artifactId>your-artifact</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>A custom project</name>
-    <url>http://www.myorganization.org</url>
+    <url>http://www.example.org</url>
 
     <dependencies>
         <dependency>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -33,6 +33,14 @@
                     <source>1.6</source>
                     <target>1.6</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+	            <artifactId>exec-maven-plugin</artifactId>
+	            <version>1.2.1</version>
+                <configuration>
+				  <mainClass>sample.App</mainClass>
+				</configuration>
             </plugin>
         </plugins>
     </build>
