@@ -3,8 +3,10 @@ package sample;
 import casmi.Applet;
 import casmi.AppletRunner;
 import casmi.KeyEvent;
+import casmi.Keyboard;
+import casmi.Mouse;
 import casmi.MouseButton;
-import casmi.MouseStatus;
+import casmi.MouseEvent;
 import casmi.graphics.color.Color;
 import casmi.graphics.color.RGBColor;
 import casmi.graphics.element.Rect;
@@ -50,15 +52,15 @@ public class App extends Applet {
     }
 
     @Override
-    public void mouseEvent(MouseStatus status, MouseButton button) {
+    public void mouseEvent(MouseEvent event, MouseButton button, Mouse mouse) {
         // Implement here.
     }
 
     @Override
-    public void keyEvent(KeyEvent event) {
+    public void keyEvent(KeyEvent event, Keyboard keyboard) {
         if (event == KeyEvent.PRESSED) {
-            if (getKeyCode() == 27) {  // if pressed ESC
-                System.exit(0);
+            if (keyboard.getKeyCode() == 27) {  // if pressed ESC
+                close();
             }
         }
     }
